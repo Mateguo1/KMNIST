@@ -21,6 +21,7 @@ I try these three models on this task: MobileNet V3, MobileViT and MobileViT wit
 !python predict.py
 ```
 
+```
 @online{clanuwat2018deep,
   author       = {Tarin Clanuwat and Mikel Bober-Irizar and Asanobu Kitamoto and Alex Lamb and Kazuaki Yamamoto and David Ha},
   title        = {Deep Learning for Classical Japanese Literature},
@@ -30,3 +31,4 @@ I try these three models on this task: MobileNet V3, MobileViT and MobileViT wit
   eprinttype   = {arXiv},
   eprint       = {cs.CV/1812.01718},
 }
+```
