@@ -9,7 +9,6 @@ from tqdm import tqdm
 from km_dataset import kmnistDataset
 from model import mobile_vit_xx_small 
 from model import ghost_vit 
-from model import mlp 
 from MobileNet import mobilenet
 
 def train_one_epoch(model, optimizer, data_loader, device, epoch):
@@ -129,8 +128,6 @@ def main(args):
         model = mobile_vit_xx_small(num_classes=args.num_classes)
     elif model_name == "ghostViT":
         model = ghost_vit(num_classes=args.num_classes)
-    elif model_name == "mlp":
-        model = mlp(num_classes=args.num_classes)
 
     model = model.to(device)
     
@@ -176,15 +173,12 @@ def main(args):
         tb_writer.add_scalar(tags[2], val_loss, epoch)
         tb_writer.add_scalar(tags[3], val_acc, epoch)
         tb_writer.add_scalar(tags[4], optimizer.param_groups[0]["lr"], epoch)
-
-        # wandb.log({"train_loss":train_loss, "train_acc":train_acc, "val_loss":val_loss, "val_acc":val_acc})
-        
+  
         if val_acc > best_acc:
             best_acc = val_acc
             torch.save(model.state_dict(), f"./weights/best_{args.model_name}.pth")
 
         torch.save(model.state_dict(), f"./weights/latest_{args.model_name}.pth")
-    # wandb.save("./mymodel_mlp.h5")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

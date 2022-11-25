@@ -1,7 +1,6 @@
 import torch
 from model import mobile_vit_xx_small
 from model import ghost_vit
-from model import mlp
 from MobileNet import mobilenet
 import numpy as np
 import argparse
@@ -27,8 +26,6 @@ if __name__ == '__main__':
         model = mobile_vit_xx_small(num_classes=10, in_channels=1).to(device)
     elif model_name == "best_ghostnet":
         model = ghost_vit(num_classes=10, in_channels=1).to(device)
-    elif model_name == "mlp":
-        model = mlp(num_classes=10, in_channels=1).to(device)
         
     model_weight_path = f"./weights/best_{model_name}.pth"
     model.load_state_dict(torch.load(model_weight_path,map_location=device))
