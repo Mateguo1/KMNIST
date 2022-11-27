@@ -160,7 +160,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     '''
-    model_name: Model used for this training (mobilenet, mobileViT, ghostViT);
+    model_name: Model used for this mission (mobilenet, mobileViT, ghostViT);
     num_classes: Number of categories;
     epochs: Number of training epochs;
     batch-size: Batch_size;

@@ -78,8 +78,7 @@ if __name__ == '__main__':
     for i in range(len(res)):
         if res[i] == str(test_labels[i]):
             num+=1
-
+            
     acc_ = num/len(res)
-    
-    print(f"The prediction based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_} on the test set.")
+    print(f"the test based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_}")
 

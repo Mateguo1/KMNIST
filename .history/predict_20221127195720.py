@@ -34,9 +34,7 @@ if __name__ == '__main__':
     # load weights
     model_weight_path = f"./weights/best_{model_name}.pth"
     model.load_state_dict(torch.load(model_weight_path,map_location=device))
-
     model.eval()
-
     # predicting 
     for i in range(len(test_imgs)):
         test_img, test_label = torch.Tensor(test_imgs[i]), torch.from_numpy(np.array(test_labels[i]))
@@ -78,8 +76,6 @@ if __name__ == '__main__':
     for i in range(len(res)):
         if res[i] == str(test_labels[i]):
             num+=1
-
     acc_ = num/len(res)
-    
-    print(f"The prediction based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_} on the test set.")
+    print(f"the test based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_}")
 

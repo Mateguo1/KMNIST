@@ -80,6 +80,5 @@ if __name__ == '__main__':
             num+=1
 
     acc_ = num/len(res)
-    
     print(f"The prediction based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_} on the test set.")
 

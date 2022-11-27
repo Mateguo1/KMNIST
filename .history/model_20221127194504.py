@@ -595,7 +595,6 @@ class GhostViT(nn.Module):
         for i in range(num_blocks):
             stride = cfg.get("stride", 1) if i == 0 else 1
 
-
             layer = GhostModule(
                 inp=input_channel,
                 oup=output_channels,

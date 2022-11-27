@@ -595,7 +595,13 @@ class GhostViT(nn.Module):
         for i in range(num_blocks):
             stride = cfg.get("stride", 1) if i == 0 else 1
 
-
+            # layer = InvertedResidual(
+            #     in_channels=input_channel,
+            #     out_channels=output_channels,
+            #     stride=stride,
+            #     expand_ratio=expand_ratio
+            # )
+            
             layer = GhostModule(
                 inp=input_channel,
                 oup=output_channels,
