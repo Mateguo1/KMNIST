@@ -5,7 +5,7 @@ A simple attempt at the KMNIST classification.
 
 I try these three models on this task: MobileNet V3, MobileViT and MobileViT with GhostNet. (Just use the smallest models in these papers).
 
-## Programming runnin introduction: 
+## Programming running introduction: 
 
 ### 1. Preparation: 
 
@@ -17,27 +17,25 @@ Please extract the zip file, the code in this section can be accessed by "cd . /
 
 Please download lease download the MNIST format's KMNIST from https://github.com/rois-codh/kmnist, create a folder "data" in the folder ". /code/ef_cnn/", and put those downloaded data into this folder.
 
-### 2. Code running:
+### 2. Code running: 
 
 Open a terminal and use "cd . /code/ef_cnn/" (this is the relative path, if access from the system terminal, it need to be changed to an absolute path) to enter the directory of this part, and then run the following commands for train and predict according to the requirements. 
 
 If need to change more parameters for training and prediction, please refer to the comments and other contents in the specific code of train.py and predict.py. If there are any problems, please contact me by this email: gzypro@connect.hku.hk. Thanks.
 
-#### 2.1 Train:
+#### 2.1 Train: 
 
 ```python
 # More optional parameters can be found in train.py
-!python train.py
+!python train.py --model_name mobilenet
 ```
 
-#### 2.2 Predict:
+#### 2.2 Predict: 
 
 ```python
 # More optional parameters can be found in predict.py
-!python predict.py
+!python predict.py --model_name mobilenet
 ```
-
-
 
 ## Cite: 
 
