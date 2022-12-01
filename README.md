@@ -34,20 +34,27 @@ main.py----------------------Cluster the Kuzushiji-MNIST and visualize the resul
 
 ### 1.3 Run the program:
 
-1. Please change the type and the name of the dataset in main.py
-2.  Run the main.py
+(1) Please change the type and the name of the dataset in main.py
 
-## 2. MLP:
+(2) Run the main.py
+
+------
+
+## 2.MLP
 
 Store in the folder ". /mlp", and enter the "mlp.ipynb"
 
 Please run according to the order of the run box in the ipynb file, where model 4, 6, 20, 25, please select the corresponding model needed to run, and finally you can get the relevant results.
 
-### 3. CNN:
+------
+
+## 3. CNN:
 
 Store in the folder ". /cnn". 
 
-### 4. EF-CNN:
+------
+
+## 4. EF-CNN:
 
 Store in the folder ". /ef_cnn". 
 
