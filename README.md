@@ -141,8 +141,6 @@ Here is the link of its <a href="https://colab.research.google.com/drive/1Ap9wky
 
 Calculations such as the confusion matrix and accuracy can be obtained by running "confusion_matrix.ipynb".
 
-If there are any problems, please contact us by this email: gzypro@connect.hku.hk. Thanks.
-
 # Cite: 
 
 ```
