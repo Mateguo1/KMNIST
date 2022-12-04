@@ -24,11 +24,11 @@ if __name__ == '__main__':
     pre_clas = []
     total_loss = 0
 
-    if model_name == "mobilenet":
+    if model_name == "best_mobilenet":
         model = mobilenet(num_classes=10, in_channels=1).to(device)
-    elif model_name == "mobileViT":
+    elif model_name == "best_mobilevit":
         model = mobile_vit_xx_small(num_classes=10, in_channels=1).to(device)
-    elif model_name == "ghostViT":
+    elif model_name == "best_ghostnet":
         model = ghost_vit(num_classes=10, in_channels=1).to(device)
 
     # load weights
@@ -82,3 +82,4 @@ if __name__ == '__main__':
     acc_ = num/len(res)
     
     print(f"The prediction based on {model_name} is done, and its accuracy is {acc_} and average loss value is {loss_} on the test set.")
+
