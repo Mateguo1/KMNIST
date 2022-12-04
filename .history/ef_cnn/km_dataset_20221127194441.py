@@ -1,9 +1,11 @@
+
 from torch import utils
 import os
 import struct
 import numpy as np
 
 def read_kmnist_train(path, is_train='train'):
+    '''Read KMNIST data in MNIST format'''
     labels_path = os.path.join(path,f'{is_train}-labels-idx1-ubyte')
     images_path = os.path.join(path,f'{is_train}-images-idx3-ubyte')
     with open(labels_path, 'rb') as lbpath:
@@ -14,9 +16,6 @@ def read_kmnist_train(path, is_train='train'):
         magic, num, rows, cols = struct.unpack('>IIII',imgpath.read(16))
         images = np.fromfile(imgpath,dtype=np.uint8).reshape(len(labels), 1, 28, 28)
     return images.astype(np.float32), labels, is_train
-
-# images, labels, is_train = read_kmnist_train("./basic_models/MobileViT/data", is_train='t10k')
-# # print(images[0].dtype())
 
 class kmnistDataset(utils.data.Dataset):
   '''KMNIST_DataSet'''
@@ -29,4 +28,3 @@ class kmnistDataset(utils.data.Dataset):
 
   def __len__(self):
     return len(self.features)
-

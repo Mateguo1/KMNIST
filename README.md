@@ -130,7 +130,7 @@ The trained models (20 epochs) are stored in "./weights".
 
 ```python
 # More optional parameters can be found in predict.py
-!python predict.py --model_name mobilenet
+!python predict.py --model_name best_mobilenet
 ```
 
 ### 4.2 Colab:

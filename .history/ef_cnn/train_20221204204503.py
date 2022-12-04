@@ -86,8 +86,7 @@ def main(args):
     ratio = 0.8
     whole_set = kmnistDataset("./data", is_train="train")
     length = len(whole_set)
-    train_size = int(ratio*length)
-    validate_size = length-train_size
+    train_size, validate_size=int(ratio*length),int((1-ratio)*length)
     train_dataset,val_dataset=torch.utils.data.random_split(whole_set,[train_size, validate_size])
     
     batch_size = args.batch_size
