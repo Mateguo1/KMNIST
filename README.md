@@ -126,6 +126,8 @@ If need to change more parameters for training or prediction, please refer to th
 
 #### 4.1.2 Predict: 
 
+The trained models (20 epochs) are stored in "./weights".
+
 ```python
 # More optional parameters can be found in predict.py
 !python predict.py --model_name mobilenet
@@ -137,7 +139,7 @@ Here is the link of its <a href="https://colab.research.google.com/drive/1Ap9wky
 
 ### 4.3 Evaluation:
 
-Calculations such as the confusion matrix and accuracy can be obtained by running "confusion_matrix.ipynb"
+Calculations such as the confusion matrix and accuracy can be obtained by running "confusion_matrix.ipynb".
 
 If there are any problems, please contact us by this email: gzypro@connect.hku.hk. Thanks.
 
